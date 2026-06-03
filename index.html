@@ -3,117 +3,735 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richu V Mathew</title>
+    <title>ITC Abu Dhabi Exam Prep - Master Guide</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #222222;
+            --border-color: #eaeaea;
+            --accent-color: #0066cc;
+            --hover-color: #f5f5f5;
+            --warn-bg: #fff9e6;
+            --warn-border: #ffe0b2;
         }
-        
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
         }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
+
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
         }
-        
-        section {
-            background: white;
-            margin: 20px 0;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        
-        section h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        
-        .social-links a:hover {
-            background-color: #764ba2;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
             color: #666;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
             margin-top: 40px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--text-color);
+        }
+
+        /* Minimalist Nav Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 5px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Module Box Styles */
+        .module {
+            margin-bottom: 50px;
+            scroll-margin-top: 70px; /* Offset for sticky nav */
+        }
+
+        /* Minimalist Table Design */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            font-weight: 600;
+            background-color: var(--hover-color);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        tr:hover {
+            background-color: var(--hover-color);
+        }
+
+        /* Callout Box */
+        .callout {
+            background-color: var(--warn-bg);
+            border-left: 3px solid var(--warn-border);
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .callout ul {
+            margin: 5px 0 0 0;
+            padding-left: 20px;
+        }
+
+        /* Utility lists */
+        .bullet-list {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .bullet-list li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.8rem;
+            color: #888;
+            text-align: center;
         }
     </style>
 </head>
 <body>
+
+<div class="container">
     <header>
-        <h1>Richu V Mathew</h1>
-        <p>Developer | Problem Solver | Passionate Coder</p>
+        <h1>🚖 ITC Abu Dhabi Exam Prep</h1>
+        <h2>Master Training Guide</h2>
     </header>
-    
-    <div class="container">
-        <section>
-            <h2>About Me</h2>
-            <p>Welcome to my personal website! I'm Richu V Mathew, a passionate developer interested in building innovative solutions and exploring new technologies.</p>
-        </section>
+
+    <!-- Interactive Navigation Menu -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#mod1">1. Hospitality</a></li>
+            <li><a href="#mod2">2. Malls & Markets</a></li>
+            <li><a href="#mod3">3. Medical</a></li>
+            <li><a href="#mod4">4. Government</a></li>
+            <li><a href="#mod5">5. Education</a></li>
+            <li><a href="#mod6">6. Tourism & Parks</a></li>
+            <li><a href="#mod7">7. Sports</a></li>
+            <li><a href="#mod8">8. Islands & Cities</a></li>
+            <li><a href="#mod9">9. Dining & Landmarks</a></li>
+            <li><a href="#mod10">10. Streets System</a></li>
+            <li><a href="#mod11">11. Routes & Distances</a></li>
+            <li><a href="#mod12">12. Public Health</a></li>
+            <li><a href="#mod13">13. Rules & Arabic</a></li>
+            <li><a href="#mod14">14. Industrial</a></li>
+        </ul>
+    </nav>
+
+    <!-- MODULE 1 -->
+    <section id="mod1" class="module">
+        <h3>🛎️ 1. Hotels, Resorts & Hospitality</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Location / Access Street</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>IBIS Abu Dhabi Gate Hotel</strong></td><td>Al Khaleej al Arabi Street (Rabdan area)</td></tr>
+                <tr><td><strong>Four Seasons Hotel</strong></td><td>Al Mariah Island</td></tr>
+                <tr><td><strong>Shangri-La Hotel</strong></td><td>Rabdan area (Bain al Jessrain)</td></tr>
+                <tr><td><strong>Centro al Manhal Hotel</strong></td><td>Rashid bin Saeed al Maktoum Street</td></tr>
+                <tr><td><strong>Kings Gate Hotel</strong></td><td>Zayed bin Sultan Street (Al Zahiyah area)</td></tr>
+                <tr><td><strong>Al Diar Sawa Hotel</strong></td><td>Al Nahyan area</td></tr>
+                <tr><td><strong>Emirates Palace Hotel</strong></td><td>Corniche Street / King Abdullah bin Abdul Aziz al Saud Street</td></tr>
+                <tr><td><strong>Royal Rose Hotel</strong></td><td>Reached via Zayed the First Street</td></tr>
+                <tr><td><strong>Cristal Hotel</strong></td><td>Zayed the First Street</td></tr>
+                <tr><td><strong>Grand Continental Flamingo Hotel</strong></td><td>Hamdan bin Mohammed Street</td></tr>
+                <tr><td><strong>Villaggio Hotel (One to One)</strong></td><td>Al Nahyan area</td></tr>
+                <tr><td><strong>Mangrove Hotel (Anantara)</strong></td><td>Zayed bin Sultan Street</td></tr>
+                <tr><td><strong>City Seasons Hotel</strong></td><td>Zayed the First Street</td></tr>
+                <tr><td><strong>Gravity Hotel</strong></td><td>Mohammed bin Zayed City</td></tr>
+                <tr><td><strong>Holiday Inn Hotel (Copthorne)</strong></td><td>Zayed the First Street</td></tr>
+                <tr><td><strong>Eclipse Boutique Suites</strong></td><td>Liwa Street</td></tr>
+                <tr><td><strong>Southern Sun Hotel</strong></td><td>Mina Street</td></tr>
+                <tr><td><strong>Edition Hotel</strong></td><td>King Abdullah bin Abdul Aziz al Saud Street (Al Bateen area)</td></tr>
+                <tr><td><strong>W Abu Dhabi Hotel</strong></td><td>Yas Island</td></tr>
+                <tr><td><strong>Al Diar Dana Hotel</strong></td><td>Al Zahiyah area</td></tr>
+                <tr><td><strong>Ramada Hotel Abu Dhabi</strong></td><td>Al Mina Street</td></tr>
+                <tr><td><strong>Al Seef Resort and Spa</strong></td><td>Sheikh Zayed bin Sultan Street (Next to Al Seef Village Mall)</td></tr>
+                <tr><td><strong>Royal M Hotel</strong></td><td>Al Bateen area (King Abdullah bin Abdul Aziz al Saud Street)</td></tr>
+                <tr><td><strong>Jannah Burj al Sarab Hotel</strong></td><td>Mina Street</td></tr>
+                <tr><td><strong>Rixos Premium Hotel</strong></td><td>Saadiyat Island</td></tr>
+                <tr><td><strong>Park Hyatt Abu Dhabi Hotel</strong></td><td>Saadiyat Island</td></tr>
+                <tr><td><strong>Staybridge Suites Hotel</strong></td><td>Yas Island</td></tr>
+                <tr><td><strong>Sheraton Hotel Khalidiya</strong></td><td>Zayed the First Street (Khalidiya area)</td></tr>
+                <tr><td><strong>Grand Millennium Al Wahda Hotel</strong></td><td>Zayed the First Street</td></tr>
+                <tr><td><strong>Eastern Mangroves Hotel</strong></td><td>Sheikh Zayed bin Sultan Street</td></tr>
+                <tr><td><strong>Westin Hotel (VOGO Hotel)</strong></td><td>Khalifa City</td></tr>
+                <tr><td><strong>Aloft Hotel</strong></td><td>Al Khaleej al Arabi Street</td></tr>
+                <tr><td><strong>Radisson Blu (Hilton Abu Dhabi)</strong></td><td>Reached via Corniche Street</td></tr>
+                <tr><td><strong>Al Diar Capital Hotel</strong></td><td>Al Mina Street</td></tr>
+                <tr><td><strong>Ramada Downtown Hotel</strong></td><td>Sheikh Zayed bin Sultan Street</td></tr>
+                <tr><td><strong>Dusit Thani Hotel</strong></td><td>Sultan bin Zayed the First Street (Al Nahyan area)</td></tr>
+                <tr><td><strong>Bab Al Qasr Hotel</strong></td><td>Corniche Street</td></tr>
+                <tr><td><strong>Sofitel Hotel</strong></td><td>Corniche Street</td></tr>
+                <tr><td><strong>Erth Hotel</strong></td><td>Al Khaleej al Arabi Street</td></tr>
+            </tbody>
+        </table>
+        <div class="callout">
+            <strong>⚠️ Critical Hospitality Notes</strong>
+            <ul>
+                <li><strong>Khalidia Palace Rayhan by Rotana:</strong> Corniche Street, Ras al Akhdar area (NOT on Khalidiya Street).</li>
+                <li><strong>Fairmont Bab Al Bahr Hotel:</strong> Rabdan area (Bain Al Jesrain), near DoT and ITC main office.</li>
+                <li><strong>Andaz Capital Gate Hotel:</strong> Al Khaleej al Arabi Street (Features the Largest Leaning Tower in the UAE).</li>
+                <li><strong>Ramada Hotel:</strong> Has exactly 2 branches total in Abu Dhabi.</li>
+                <li><strong>Saint Regis Hotel:</strong> Has exactly 2 branches total in Abu Dhabi.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- MODULE 2 -->
+    <section id="mod2" class="module">
+        <h3>🛍️ 2. Shopping Malls, Markets & Stores</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Location / Context</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Yas Mall</strong></td><td>Yas Island</td></tr>
+                <tr><td><strong>Abu Dhabi Mall</strong></td><td>Al Zahiyah area</td></tr>
+                <tr><td><strong>Marks & Spencer</strong></td><td>Rashid bin Saeed al Maktoum Street</td></tr>
+                <tr><td><strong>Al Makani Mall</strong></td><td>Al Shamkha area</td></tr>
+                <tr><td><strong>Carpet Market</strong></td><td>Mina area</td></tr>
+                <tr><td><strong>Bawabat Al Sharq Mall</strong></td><td>Baniyas East</td></tr>
+                <tr><td><strong>Al Forsan Central Mall</strong></td><td>Khalifa City</td></tr>
+                <tr><td><strong>Birds & Ornamental Fish Market</strong></td><td>Mina area</td></tr>
+                <tr><td><strong>IKEA</strong></td><td>Yas Island</td></tr>
+                <tr><td><strong>Deerfields Mall</strong></td><td>Al Bahiya area (Abu Dhabi-Dubai Road)</td></tr>
+                <tr><td><strong>Capital Mall</strong></td><td>Mohammed bin Zayed City</td></tr>
+                <tr><td><strong>World Trade Center (WTC)</strong></td><td>Khalifa Street</td></tr>
+                <tr><td><strong>Al Wahda Mall</strong></td><td>Near Grand Millennium Hotel and Bus Station</td></tr>
+                <tr><td><strong>Al Raha Mall</strong></td><td>Opposite Khalifa City / Across Al Raha Beach</td></tr>
+                <tr><td><strong>Abu Dhabi Cooperative Society</strong></td><td>Dhafeer Street</td></tr>
+                <tr><td><strong>Shams Butik</strong></td><td>Al Reem Island</td></tr>
+                <tr><td><strong>Al Seef Village Mall</strong></td><td>Sheikh Zayed bin Sultan Street (Sheikh Khalifa Park area)</td></tr>
+                <tr><td><strong>Al Falah Central Mall</strong></td><td>New Al Falah City</td></tr>
+                <tr><td><strong>My City Centre</strong></td><td>Masdar City</td></tr>
+                <tr><td><strong>My Town Center</strong></td><td>Mohammed bin Zayed City</td></tr>
+                <tr><td><strong>Al Mariyah Mall</strong></td><td>Near Le Royal Méridien Hotel</td></tr>
+                <tr><td><strong>Courtyard Mall</strong></td><td>Al Riyadh City</td></tr>
+                <tr><td><strong>Mafraq Mall</strong></td><td>Baniyas East</td></tr>
+                <tr><td><strong>Fish Market</strong></td><td>Mina area</td></tr>
+            </tbody>
+        </table>
+        <div class="callout">
+            <strong>💡 Quick Map Rules</strong>
+            <ul>
+                <li><strong>Marina Mall:</strong> Closest mall to Etihad Towers and near the Marina Eye.</li>
+                <li><strong>Al Muhairy Shopping Center:</strong> Zayed the First Street, Al Khalediya area (NOT on Arabian Gulf Street).</li>
+                <li><strong>Yas Mart:</strong> Located in Baniyas (NOT in Khalifa City).</li>
+                <li><strong>Khalifa City Malls:</strong> Exactly 3 properties — Al Forsan Central Mall, Safeer Mall, and Wellness Boulevard Mall.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- MODULE 3 -->
+    <section id="mod3" class="module">
+        <h3>🏥 3. Hospitals, Clinics & Medical Centers</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Location / Layout Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Mafraq Hospital</strong></td><td>Mafraq area (Interchange of E11 and E22)</td></tr>
+                <tr><td><strong>Blood Bank</strong></td><td>Mubarak bin Mohammed Street, Al Khaledia area (Near Khalidiya Mall)</td></tr>
+                <tr><td><strong>Rahba Hospital</strong></td><td>Abu Dhabi-Dubai Road</td></tr>
+                <tr><td><strong>Medeor Hospital</strong></td><td>Sultan bin Zayed the First Street</td></tr>
+                <tr><td><strong>Health Plus Medical Center</strong></td><td>Hazza bin Zayed the First Street (Behind Global Care Hospital)</td></tr>
+                <tr><td><strong>Sheikh Shakhbout Medical City (SSMC)</strong></td><td>Mafraq area (E11/E22), near Zayed Higher Org.</td></tr>
+                <tr><td><strong>Cleveland Clinic Abu Dhabi</strong></td><td>Al Mariah Island</td></tr>
+                <tr><td><strong>Corniche Hospital</strong></td><td>Located on the Corniche</td></tr>
+                <tr><td><strong>Al Raha Hospital</strong></td><td>Intersection of Najda Street and Electra Street</td></tr>
+                <tr><td><strong>Abu Dhabi Falcon Hospital</strong></td><td>Near the Airport and Shamkha area</td></tr>
+                <tr><td><strong>Universal Hospital</strong></td><td>Rashid bin Saeed al Maktoum Street</td></tr>
+                <tr><td><strong>Burjeel Hospital (Abu Dhabi)</strong></td><td>Reached via Al Najda Street</td></tr>
+                <tr><td><strong>Burjeel Hospital (MBZ)</strong></td><td>Mohammed bin Zayed City</td></tr>
+                <tr><td><strong>Al Ahalia Hospital</strong></td><td>Hamdan bin Mohammed Street</td></tr>
+                <tr><td><strong>Al Dhafra Dental Center</strong></td><td>Reached via Salama bin Butti Street</td></tr>
+                <tr><td><strong>LLH Hospital</strong></td><td>Zayed the First Street</td></tr>
+                <tr><td><strong>Al Etihad Clinic</strong></td><td>Reached via Mohammed bin Khalifa Street</td></tr>
+                <tr><td><strong>Al Rowda Clinic</strong></td><td>Al Karama Street</td></tr>
+                <tr><td><strong>Al Zafranah Clinic</strong></td><td>Sultan bin Zayed the First Street (Al Zafrana area)</td></tr>
+                <tr><td><strong>Dar Al Shifa Hospital</strong></td><td>Reached via Najda Street and Defense Street</td></tr>
+                <tr><td><strong>Al Bateen Clinic</strong></td><td>Al Bateen Street</td></tr>
+                <tr><td><strong>New Medical Centre (NMC)</strong></td><td>Zayed the First Street / Electra Street</td></tr>
+                <tr><td><strong>Gulf Diagnostic Center Hospital</strong></td><td>Al Khaleej al Arabi Street</td></tr>
+                <tr><td><strong>Imperial College Diabetes Centre</strong></td><td>Al Khaleej al Arabi Street</td></tr>
+            </tbody>
+        </table>
+        <div class="callout">
+            <strong>🧠 Strict Medical Exclusions</strong>
+            <ul>
+                <li><strong>Danat Al Emarat Women & Children Hospital:</strong> Rabdan area / Officer City (NOT on Hazza bin Zayed the First Street).</li>
+                <li><strong>Sheikh Khalifa Medical City:</strong> Al Karama Street, positioned directly between Al Karama Street and Rashid bin Saeed al Maktoum Street.</li>
+                <li><strong>Mediclinic (Al Noor Hospital):</strong> Khalifa Street (NOT on Electra Street).</li>
+                <li><strong>Sheikh Khalifa Hospital:</strong> Positioned between Al Karama Street and Airport Road.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- MODULE 4 -->
+    <section id="mod4" class="module">
+        <h3>🏛️ 4. Government Buildings, Authorities & Embassies</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Institution</th>
+                    <th>Location / Access Street</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Oman Embassy</strong></td><td>Shakhbout bin Sultan Street</td></tr>
+                <tr><td><strong>Indian Embassy</strong></td><td>Embassies Area</td></tr>
+                <tr><td><strong>USA Embassy</strong></td><td>Embassies Area</td></tr>
+                <tr><td><strong>KSA Embassy</strong></td><td>Embassies Area</td></tr>
+                <tr><td><strong>Singapore Embassy</strong></td><td>Al Khaleej al Arabi Street</td></tr>
+                <tr><td><strong>Italian Embassy</strong></td><td>Corniche Street (Inside Etihad Towers)</td></tr>
+                <tr><td><strong>Philippine Embassy</strong></td><td>Al Dhafra Street, Mushrif area</td></tr>
+                <tr><td><strong>ADIA (Investment Authority)</strong></td><td>Corner of Corniche Street and Al Hisn Street</td></tr>
+                <tr><td><strong>Central Bank of the UAE</strong></td><td>King Abdullah bin Abdul Aziz al Saud Street (Al Bateen area)</td></tr>
+                <tr><td><strong>Abu Dhabi Securities Exchange (ADX)</strong></td><td>Al Hisn Street (Landmark Tower)</td></tr>
+                <tr><td><strong>Ministry of Foreign Affairs</strong></td><td>King Abdullah bin Abdul Aziz al Saud Street (Al Bateen area)</td></tr>
+                <tr><td><strong>Crown Prince Court</strong></td><td>King Abdullah bin Abdul Aziz al Saud Street (Al Bateen area)</td></tr>
+                <tr><td><strong>Ministry of Community Development</strong></td><td>Rashid bin Saeed al Maktoum Street (Airport Road)</td></tr>
+                <tr><td><strong>Department of Finance</strong></td><td>Rashid bin Saeed al Maktoum Street</td></tr>
+                <tr><td><strong>Immigration Department</strong></td><td>Al Saada Street, crossing Rashid bin Saeed Street</td></tr>
+                <tr><td><strong>Federal Authority for Identity & Citizenship</strong></td><td>Shakhbout bin Sultan Street / Al Saada Street</td></tr>
+                <tr><td><strong>Abu Dhabi Police GHQ / HQ</strong></td><td>Shakhbout bin Sultan Street (Opposite Khalifa University)</td></tr>
+                <tr><td><strong>Al Shaabiya Police Station</strong></td><td>Shakhbout bin Sultan Street</td></tr>
+                <tr><td><strong>Baniyas Police Station</strong></td><td>Near Bawabat Al Sharq Mall</td></tr>
+                <tr><td><strong>Al Madinah Police Station</strong></td><td>Mina area</td></tr>
+                <tr><td><strong>Drivers & Vehicles Licensing Dept.</strong></td><td>Sultan bin Zayed the First Street (Muroor), near Mushrif Mall</td></tr>
+                <tr><td><strong>Department of Transport / ITC Office</strong></td><td>Rabdan area (Bain Al Jesrain)</td></tr>
+                <tr><td><strong>Abu Dhabi Central Post Office</strong></td><td>Sultan bin Zayed the First Street (Madinat Zayed area)</td></tr>
+                <tr><td><strong>Department of Culture and Tourism</strong></td><td>Corniche Street (Inside Nation Towers)</td></tr>
+                <tr><td><strong>Ministry of Finance</strong></td><td>Reached via Al Falah Street</td></tr>
+                <tr><td><strong>Ministry of Energy and Industry</strong></td><td>Reached via Al Falah Street</td></tr>
+                <tr><td><strong>Abu Dhabi Municipality</strong></td><td>Reached via Al Falah Street</td></tr>
+                <tr><td><strong>Department of Economic Development</strong></td><td>Reached via Al Najda Street</td></tr>
+                <tr><td><strong>Judicial Department</strong></td><td>Al Khaleej al Arabi Street</td></tr>
+                <tr><td><strong>Zakat Fund</strong></td><td>Reached via Al Khaleej al Arabi Street</td></tr>
+                <tr><td><strong>Ministry of Interior</strong></td><td>Reached via Al Khaleej al Arabi Street</td></tr>
+                <tr><td><strong>Directorate of Traffic and Patrol</strong></td><td>Dihan Street (Al Zafrana area)</td></tr>
+                <tr><td><strong>Education & Knowledge (ADEK)</strong></td><td>Near Sheikh Khalifa Park and Ministry Complex</td></tr>
+                <tr><td><strong>Family Development Foundation HQ</strong></td><td>Mushrif area</td></tr>
+                <tr><td><strong>Abu Dhabi Chamber of Commerce</strong></td><td>Corniche Street, intersecting Rashid bin Zayed al Maktoum Street</td></tr>
+                <tr><td><strong>Al Mamoura Building</strong></td><td>Al Nahyan area (Sultan bin Zayed 1st & Mohammed bin Khalifa)</td></tr>
+                <tr><td><strong>Abu Dhabi Civil Defence HQ</strong></td><td>Near Water and Electricity Authority</td></tr>
+                <tr><td><strong>General Secretariat of Executive Council</strong></td><td>Near Airport Road, behind Carrefour</td></tr>
+                <tr><td><strong>Emirates Identity Authority</strong></td><td>Khalifa City</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MODULE 5 -->
+    <section id="mod5" class="module">
+        <h3>🎓 5. Educational Institutions</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Institution</th>
+                    <th>Location / Context</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>ADNOC Technical Academy</strong></td><td>Al Shamkha, Abu Dhabi</td></tr>
+                <tr><td><strong>Zayed University</strong></td><td>Zayed City</td></tr>
+                <tr><td><strong>Masdar Institute of Science & Tech</strong></td><td>Masdar City</td></tr>
+                <tr><td><strong>Abu Dhabi University</strong></td><td>Left-hand side heading to Al Ain (Al Maffy area)</td></tr>
+                <tr><td><strong>Emirates Driving Company / School</strong></td><td>Outside Abu Dhabi (Mussafah Sanaiya)</td></tr>
+                <tr><td><strong>Liwa College of Technology</strong></td><td>Al Najda Street (Near Department of Economic Development)</td></tr>
+                <tr><td><strong>Al Ain University (Abu Dhabi Branch)</strong></td><td>Mohammed bin Zayed City</td></tr>
+                <tr><td><strong>Khalifa University</strong></td><td>Opposite Abu Dhabi Police GHQ</td></tr>
+                <tr><td><strong>Abu Dhabi Police College</strong></td><td>Al Rihan area (Reached via Sultan bin Zayed the First Street)</td></tr>
+                <tr><td><strong>Mohammed V University</strong></td><td>Sultan bin Zayed the First Street</td></tr>
+                <tr><td><strong>INSEAD University</strong></td><td>Al Mariah Island</td></tr>
+                <tr><td><strong>Higher College of Technology (Women)</strong></td><td>Between Sultan bin Zayed 1st, Najda, Hazza bin Zayed 1st, and Al Falah</td></tr>
+                <tr><td><strong>CERT Office</strong></td><td>Near Higher College of Technology for Men and Dusit Thani</td></tr>
+                <tr><td><strong>Sorbonne University</strong></td><td>Al Reem Island</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MODULE 6 -->
+    <section id="mod6" class="module">
+        <h3>🌳 6. Tourism, Heritage, Parks & Culture</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Location / Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Umm al Nar</strong></td><td>Archeological site in the Emirate of Abu Dhabi</td></tr>
+                <tr><td><strong>Sheikh Zayed Heritage Festival</strong></td><td>Al Wathba area</td></tr>
+                <tr><td><strong>Jubail Mangrove Park</strong></td><td>Sheikh Khalifa Highway</td></tr>
+                <tr><td><strong>Al Hosn Palace / Qasr Al Hosn</strong></td><td>Hamdan bin Mohammed Street</td></tr>
+                <tr><td><strong>Emirates National Auto Museum</strong></td><td>Hamim Road, Western Region</td></tr>
+                <tr><td><strong>Masdar Park</strong></td><td>Masdar City</td></tr>
+                <tr><td><strong>Heritage Park</strong></td><td>Corniche Street</td></tr>
+                <tr><td><strong>Umm al Emarat Park</strong></td><td>Mohammed bin Khalifa Street</td></tr>
+                <tr><td><strong>Ferrari World</strong></td><td>Yas Island</td></tr>
+                <tr><td><strong>Hafeet Tomb</strong></td><td>Al Ain</td></tr>
+                <tr><td><strong>Mangrove National Park</strong></td><td>Zayed bin Sultan Street</td></tr>
+                <tr><td><strong>Abu Dhabi Museum & Aquarium</strong></td><td>Sheikh Khalifa Park area</td></tr>
+                <tr><td><strong>Core Tourist Sights</strong></td><td>Qasr al Watan, Ferrari World, and Emirates Palace Hotel</td></tr>
+                <tr><td><strong>Emirates Park Zoo</strong></td><td>Al Shahama area, Abu Dhabi-Dubai Road</td></tr>
+                <tr><td><strong>Circuit X Adventure Park</strong></td><td>Al Hudariyat Island</td></tr>
+                <tr><td><strong>Bab al Nojoom</strong></td><td>Hudariyat Island</td></tr>
+                <tr><td><strong>Bike Park</strong></td><td>Hudariyat Island</td></tr>
+                <tr><td><strong>Marsana, Marvista, & 321 Sport</strong></td><td>Hudariyat Island</td></tr>
+                <tr><td><strong>Capital Park</strong></td><td>Sultan bin Zayed the First Street & Khalifa Street (Al Dana area)</td></tr>
+                <tr><td><strong>Fay Park</strong></td><td>Al Reem Island</td></tr>
+                <tr><td><strong>Liwa Oasis</strong></td><td>Largest Oasis in the Emirate of Abu Dhabi</td></tr>
+                <tr><td><strong>Oasis System Check</strong></td><td>Liwa Oasis and Al Ain Oasis</td></tr>
+                <tr><td><strong>Heritage Village</strong></td><td>Corniche Street, near Marina Mall</td></tr>
+                <tr><td><strong>Delma Park</strong></td><td>Reached via Sheikha Fatima bint Mubarak Street</td></tr>
+                <tr><td><strong>Sheikh Khalifa Park</strong></td><td>Sheikh Zayed bin Sultan Street, near Ministry Complex</td></tr>
+                <tr><td><strong>Splash Park</strong></td><td>Hudariyat Island</td></tr>
+                <tr><td><strong>Saadiyat Beach Club</strong></td><td>Saadiyat Island</td></tr>
+                <tr><td><strong>Family / Formal / Urban Parks</strong></td><td>Reached via Corniche Street</td></tr>
+                <tr><td><strong>Louvre Museum Abu Dhabi</strong></td><td>Saadiyat Island</td></tr>
+                <tr><td><strong>Warner Bros. World</strong></td><td>Yas Island</td></tr>
+                <tr><td><strong>Al Wathba Luxury Hotel & Resort</strong></td><td>Al Wathba South</td></tr>
+                <tr><td><strong>Hafeet Mountain</strong></td><td>Al Ain (Hazza bin Sultan Street)</td></tr>
+                <tr><td><strong>Sheikh Zayed Grand Mosque</strong></td><td>Right side heading to Corniche from Al Khaleej al Arabi Street</td></tr>
+                <tr><td><strong>Sport City Park Common Name</strong></td><td>Old Airport Park</td></tr>
+            </tbody>
+        </table>
+        <div class="callout">
+            <strong>🚨 Warning</strong>
+            <ul>
+                <li><strong>Wahat Al Karama:</strong> Located directly opposite the Sheikh Zayed Grand Mosque (NOT inside Reem Island).</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- MODULE 7 -->
+    <section id="mod7" class="module">
+        <h3>🏁 7. Sports Landmarks, Infrastructure & Clubs</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Location / Boundary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Zayed Sports City</strong></td><td>Al Khaleej al Arabi Street</td></tr>
+                <tr><td><strong>Marina Al Bateen</strong></td><td>King Abdullah bin Abdul Aziz al Saud Street (Inside Abu Dhabi)</td></tr>
+                <tr><td><strong>Al Bateen Beach</strong></td><td>Khalifa al Mubarak Street</td></tr>
+                <tr><td><strong>Al Bateen Airport</strong></td><td>Rashid bin Saeed al Maktoum Street</td></tr>
+                <tr><td><strong>Yas Beach</strong></td><td>Southern side of Yas Island</td></tr>
+                <tr><td><strong>ADNEC (Exhibition Centre)</strong></td><td>Al Khaleej al Arabi Street</td></tr>
+                <tr><td><strong>Marina Eye</strong></td><td>Corniche Street, near Marina Mall</td></tr>
+                <tr><td><strong>Al Jazeera Club</strong></td><td>Sultan bin Zayed the First Street</td></tr>
+                <tr><td><strong>Abu Dhabi Country Club</strong></td><td>Shakhbout bin Sultan Street / Al Saada Street</td></tr>
+                <tr><td><strong>Saadiyat Beach Golf Club</strong></td><td>Saadiyat Island</td></tr>
+                <tr><td><strong>Abu Dhabi Equestrian Club</strong></td><td>Shakhbout bin Sultan Street</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MODULE 8 -->
+    <section id="mod8" class="module">
+        <h3>🗺️ 8. Islands, Cities & Districts</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>District</th>
+                    <th>Location / Classification</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Al Nouf</strong></td><td>Outside Abu Dhabi</td></tr>
+                <tr><td><strong>Hodariyat Island</strong></td><td>West of Abu Dhabi city, connected via Hodariyat Bridge near Al Bateen Beach</td></tr>
+                <tr><td><strong>Al Shahama</strong></td><td>Outside Abu Dhabi (Abu Dhabi-Dubai Road)</td></tr>
+                <tr><td><strong>Al Falah / New Al Falah City</strong></td><td>Outside Abu Dhabi</td></tr>
+                <tr><td><strong>Al Riyadh</strong></td><td>Outside Abu Dhabi, near Al Shamkha area</td></tr>
+                <tr><td><strong>Al-Aryam Island</strong></td><td>Al Dhafra area</td></tr>
+                <tr><td><strong>Masdar City</strong></td><td>Behind Airport and Khalifa City</td></tr>
+                <tr><td><strong>Al Shawamekh</strong></td><td>Outside Abu Dhabi, near Shakhbout City</td></tr>
+                <tr><td><strong>Hamim / Hameem</strong></td><td>Western Region, Al Dhafra area (Outside Abu Dhabi)</td></tr>
+                <tr><td><strong>Al Shamkha</strong></td><td>Outside Abu Dhabi Island</td></tr>
+                <tr><td><strong>Al Yarfa / Al Amera</strong></td><td>Abu Dhabi-Al Ain Road</td></tr>
+                <tr><td><strong>Al Mariah Island</strong></td><td>Within the Emirate of Abu Dhabi</td></tr>
+                <tr><td><strong>Al Reem Island</strong></td><td>Within the Emirate of Abu Dhabi</td></tr>
+                <tr><td><strong>Shams Abu Dhabi / Project</strong></td><td>Outside Abu Dhabi (Al Reem Island / Madinat Zayed)</td></tr>
+                <tr><td><strong>Sky Tower</strong></td><td>Al Reem Island</td></tr>
+                <tr><td><strong>Al Samha</strong></td><td>Nearest city to Khalifa Port</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MODULE 9 -->
+    <section id="mod9" class="module">
+        <h3>🍽️ 9. Landmarks & Dining</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Landmark</th>
+                    <th>Location / Access Street</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Al Fanar Restaurant</strong></td><td>Famous traditional restaurant in Abu Dhabi</td></tr>
+                <tr><td><strong>Zahrat Al Lebnan</strong></td><td>East part of Abu Dhabi</td></tr>
+                <tr><td><strong>Indian Palace Restaurant</strong></td><td>Sheikh Zayed bin Sultan Street</td></tr>
+                <tr><td><strong>Kizad Port (Sheikh Khalifa Port)</strong></td><td>Abu Dhabi-Dubai Road (Al Samha area)</td></tr>
+                <tr><td><strong>National Center of Meteorology</strong></td><td>Al Shawamekh</td></tr>
+                <tr><td><strong>Emirates Aluminium Company</strong></td><td>Near Sheikh Khalifa Kizad Port</td></tr>
+                <tr><td><strong>ADNOC Business Center</strong></td><td>Al Bateen Street</td></tr>
+                <tr><td><strong>BMW Showroom Abu Dhabi</strong></td><td>Zayed the First Street</td></tr>
+                <tr><td><strong>New Abu Dhabi Cars Showroom</strong></td><td>Al Shamkha area / Al Rahayel city</td></tr>
+                <tr><td><strong>Mary, the Mother of Jesus Mosque</strong></td><td>Mushrif area</td></tr>
+                <tr><td><strong>Sheikha Fatima Bint Mubarak Mosque</strong></td><td>Mohammed bin Zayed City</td></tr>
+                <tr><td><strong>Etisalat Main Office</strong></td><td>Rashid bin Zayed al Maktoum Street</td></tr>
+                <tr><td><strong>Al Bahar Tower</strong></td><td>Sheikh Zayed bin Sultan Street (Al Nahyan area)</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MODULE 10 -->
+    <section id="mod10" class="module">
+        <h3>🛣️ 10. Street Names & Street System Data</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Real Street / Area Name</th>
+                    <th>Common Name / Alias</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Street 22 / Dalma Street</strong></td><td>Al Najda</td></tr>
+                <tr><td><strong>Al Khaleej Al Arabi Street</strong></td><td>Musaffah Road</td></tr>
+                <tr><td><strong>Sheikh Zayed bin Sultan Street</strong></td><td>Salam Street</td></tr>
+                <tr><td><strong>Al Falah Street</strong></td><td>Passport Street</td></tr>
+                <tr><td><strong>Hazza bin Zayed the First Street</strong></td><td>Defense Street</td></tr>
+                <tr><td><strong>Al Danah Area</strong></td><td>Madinat Zayed (Former Name)</td></tr>
+                <tr><td><strong>Al Zahiyah Area</strong></td><td>Tourist Club Area (Former Name)</td></tr>
+                <tr><td><strong>Shakhbout City</strong></td><td>Khalifa City B (Former Name)</td></tr>
+                <tr><td><strong>Al Maqta</strong></td><td>Bain al Jessrain (Former Name)</td></tr>
+            </tbody>
+        </table>
+
+        <p><strong>📐 The 3 Longest Streets in Abu Dhabi:</strong></p>
+        <ol>
+            <li>Al Khaleej al Arabi Street</li>
+            <li>Rashid bin Zayed al Maktoum Street</li>
+            <li>Sheikh Zayed bin Sultan Street</li>
+        </ol>
+
+        <p><strong>🔗 Layout & Intersections:</strong></p>
+        <ul class="bullet-list">
+            <li><strong>Shakhbout bin Sultan Street / Al Saada Street:</strong> Connects Immigration Office and the Higher College of Technology to Al Hudariyat Island.</li>
+            <li><strong>Sultan bin Zayed the First Street:</strong> Positioned directly between the Dusit Thani Hotel and the Al Jazeera Club.</li>
+        </ul>
+    </section>
+
+    <!-- MODULE 11 -->
+    <section id="mod11" class="module">
+        <h3>🧭 11. Regional Navigation, Routes & Distances</h3>
+        <p><strong>🌐 Core City Distances:</strong> All primary corridors (Abu Dhabi ↔ Dubai, Abu Dhabi ↔ Al Ain, Al Ain ↔ Dubai) span exactly <strong>150 km</strong>.</p>
         
-        <section>
-            <h2>Projects</h2>
-            <p>Check back soon for my latest projects and contributions!</p>
-        </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Target Destination Route</th>
+                    <th>Step-by-Step Road Sequence</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Khalifa Hospital $\rightarrow$ Abu Dhabi Mall</strong></td><td>Al Karama $\rightarrow$ Al Falah $\rightarrow$ Al Zahiya</td></tr>
+                <tr><td><strong>Abu Dhabi Municipality $\rightarrow$ Marina Mall</strong></td><td>Salam $\rightarrow$ Corniche $\rightarrow$ King Salman bin Abdul Aziz Al Saud Street</td></tr>
+                <tr><td><strong>Abu Dhabi Bus Terminal $\rightarrow$ Emirates Palace</strong></td><td>Hazza bin Zayed the First $\rightarrow$ King Abdullah bin Abdul Aziz al Saud Street</td></tr>
+                <tr><td><strong>Zayed Military Hospital $\rightarrow$ Al Wahda Mall</strong></td><td>Al Khaleej al Arabi $\rightarrow$ Khalifa bin Shakhbout $\rightarrow$ Hazza bin Zayed the First Street</td></tr>
+                <tr><td><strong>New ITC $\rightarrow$ Sheraton Hotel Corniche</strong></td><td>Rabdan area $\rightarrow$ Abu Dhabi-Al Ain Road $\rightarrow$ Airport Road and Salama Street</td></tr>
+                <tr><td><strong>Saudi Arabia Embassy $\rightarrow$ Al Bateen Airport</strong></td><td>Embassies Area $\rightarrow$ Airport Road</td></tr>
+                <tr><td><strong>Sheikh Khalifa Hospital $\rightarrow$ Abu Dhabi Municipality</strong></td><td>Al Karama $\rightarrow$ Al Falah</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MODULE 12 -->
+    <section id="mod12" class="module">
+        <h3>💉 12. Public Health Services</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service Requirement</th>
+                    <th>Location Layouts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>COVID-19 Vaccination (4 Locations)</strong></td><td>Mina Port area, Al Bateen area, Al Manhal area, Zayed Sports City</td></tr>
+                <tr><td><strong>Children’s Vaccination Center</strong></td><td>Yas Island</td></tr>
+                <tr><td><strong>COVID-19 Testing (3 Locations)</strong></td><td>Musaffah (Behind ICAD), Zayed Sports City, Mina Port area</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MODULE 13 -->
+    <section id="mod13" class="module">
+        <h3>📋 13. ITC Operational Rules, Fines & Arabic Terms</h3>
         
-        <section>
-            <h2>Connect With Me</h2>
-            <p>Feel free to reach out and connect:</p>
-            <div class="social-links">
-                <a href="https://github.com/richuvmathew-prog" target="_blank">GitHub</a>
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="mailto:your-email@example.com">Email</a>
-            </div>
-        </section>
-    </div>
-    
+        <p><strong>🗣️ Driver-Passenger Arabic Vocabulary:</strong></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>English Phrase</th>
+                    <th>Transliterated Arabic</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>City / Town</strong></td><td>Madeena</td></tr>
+                <tr><td><strong>College</strong></td><td>Collage</td></tr>
+                <tr><td><strong>Club</strong></td><td>Nadi</td></tr>
+                <tr><td><strong>Apartment</strong></td><td>Shaka</td></tr>
+                <tr><td><strong>Airport</strong></td><td>Matar</td></tr>
+                <tr><td><strong>"Drop me near Abu Dhabi Mall"</strong></td><td>Nazal ni min garib markaz tasawoq Abu Dhabi</td></tr>
+                <tr><td><strong>"Switch on the A/C"</strong></td><td>Shagal mokayef</td></tr>
+                <tr><td><strong>"Turn right before the signal"</strong></td><td>Lef yameen min gabel ishara</td></tr>
+                <tr><td><strong>Wait / Go</strong></td><td>Entazer / Roh</td></tr>
+                <tr><td><strong>Stop here / Go to the other side</strong></td><td>Wakif hina / Roh sob tani</td></tr>
+                <tr><td><strong>Roundabout / Street</strong></td><td>Dawar / Sharie</td></tr>
+                <tr><td><strong>Bridge / Intersection</strong></td><td>Jesser / Takato turuk</td></tr>
+                <tr><td><strong>Up / Down</strong></td><td>Fouq / Tahet</td></tr>
+                <tr><td><strong>Before / After</strong></td><td>Kabel / Baad</td></tr>
+            </tbody>
+        </table>
+
+        <p><strong>⚙️ ITC Industry Regulations & Knowledge:</strong></p>
+        <ul class="bullet-list">
+            <li><strong>ITC Test Performance:</strong> Scoring 85 marks awards a 2-year permit duration.</li>
+            <li><strong>Airport Taxi Colors:</strong> Black.</li>
+            <li><strong>Identifying an ITC Inspector:</strong> Check their official credentials / permit documentation.</li>
+            <li><strong>Road Speeds:</strong> Yes, roads are bound by specific posted speeds.</li>
+            <li><strong>Mission of an ITC Inspector:</strong> Monitor taxi operations.</li>
+            <li><strong>Plastic Fleet Separator:</strong> Features exclusively inside the Smart Taxi.</li>
+            <li><strong>MDT Streamax Capabilities:</strong> Drivers can print both the old receipt and current receipt.</li>
+            <li><strong>ITC Taxi Inspection Hub:</strong> Located in Baniyas.</li>
+            <li><strong>Abu Dhabi Emirate Airports:</strong> Exactly 2 Airports total (Zayed International Airport and Al Ain International Airport).</li>
+            <li><strong>Driving Testing Centers:</strong> Baniyas and Al Ain.</li>
+        </ul>
+
+        <p><strong>💰 Speeding & Traffic Fines Schedule:</strong></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Offense Parameter</th>
+                    <th>Penalty Structure</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Maximum speed limit within Abu Dhabi City</strong></td><td>80 km/h</td></tr>
+                <tr><td><strong>Overtaking at unauthorized places</strong></td><td>600 AED</td></tr>
+                <tr><td><strong>Exceeding speed limit by $\le$ 20 km/h</strong></td><td>300 AED</td></tr>
+                <tr><td><strong>Exceeding speed limit by $\le$ 30 km/h</strong></td><td>600 AED</td></tr>
+                <tr><td><strong>Exceeding speed limit by $\le$ 40 km/h</strong></td><td>700 AED</td></tr>
+                <tr><td><strong>Exceeding speed limit by $\le$ 50 km/h</strong></td><td>1,000 AED</td></tr>
+                <tr><td><strong>Exceeding speed limit by $\le$ 60 km/h</strong></td><td>1,500 AED + 8 Black Points</td></tr>
+                <tr><td><strong>Exceeding speed limit by $>$ 60 km/h</strong></td><td>2,000 AED + 12 Black Points</td></tr>
+                <tr><td><strong>Exceeding speed limit by $\le$ 80 km/h</strong></td><td>3,000 AED + 23 Black Points</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- MODULE 14 -->
+    <section id="mod14" class="module">
+        <h3>🏭 14. Industrial Areas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Industrial Hub</th>
+                    <th>Location Boundary Context</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Mafraq Industrial Area</strong></td><td>Outside Abu Dhabi (Note: Q273 text says Al Reem Island incorrectly, but Q61 clarifies it as Outside Abu Dhabi)</td></tr>
+                <tr><td><strong>Mussafah Sanaiya</strong></td><td>Outside Abu Dhabi (Home to Life Care Hospital, Delma Mall, and Emirates Driving School)</td></tr>
+            </tbody>
+        </table>
+    </section>
+
     <footer>
-        <p>&copy; 2026 Richu V Mathew. All rights reserved.</p>
+        <p>created by © RICHU MATHEW VENGASSERIL.</p>
     </footer>
+</div>
+
 </body>
 </html>
